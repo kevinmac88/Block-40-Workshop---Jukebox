@@ -69,3 +69,5 @@ endpoints. Remember to send appropriate status codes and error messages!
 - `GET /playlists/:id` sends playlist specified by id
 - `GET /playlists/:id/tracks` sends all tracks in the playlist
 - `POST /playlists/:id/tracks` adds a new track to the playlist
+  - `trackId` should be sent in request body
+  - Sends the created `playlist_track` with status 201
