@@ -21,6 +21,10 @@ table playlists_tracks {
   id serial [pk]
   playlist_id integer [not null]
   track_id integer [not null]
+
+  indexes {
+    (playlist_id, track_id) [unique]
+  }
 }
 
 table tracks {
@@ -43,6 +47,7 @@ names of the two linked tables.
 2. Write `db/schema.sql` to create tables according to the schema above.
    - If either a playlist or a track is deleted, the deletion should cascade to all
      related playlists_tracks records.
+   - Each track can only be in a playlist once. (Use a unique constraint!)
 3. Complete `seed.js` and necessary queries to seed the database with at least
    20 tracks and 10 playlists. Create at least 15 playlists_tracks so that some of
    the seeded tracks belong to some of the seeded playlists.
