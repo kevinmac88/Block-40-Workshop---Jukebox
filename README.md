@@ -55,7 +55,8 @@ names of the two linked tables.
 ## Server
 
 Once your database is properly seeded, build an Express app that serves the following
-endpoints. Remember to send appropriate status codes and error messages!
+endpoints. Remember to send appropriate status codes and error messages! You can use `npm
+run test` to check your work as you build out these endpoints.
 
 `/tracks` router
 
