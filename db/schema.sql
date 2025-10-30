@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS playlist_tracks;
+DROP TABLE IF EXISTS playlists_tracks;
 DROP TABLE IF EXISTS tracks;
 DROP TABLE IF EXISTS playlists;
 
@@ -18,7 +18,7 @@ CREATE TABLE tracks (
 CREATE TABLE playlists_tracks (
     id SERIAL PRIMARY KEY,
     playlist_id INTEGER NOT NULL,
-    track_id INTEGER NOT NULL
+    track_id INTEGER NOT NULL,
 
     CONSTRAINT fk_playlist
     FOREIGN KEY (playlist_id)
