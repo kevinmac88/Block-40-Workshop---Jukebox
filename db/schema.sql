@@ -23,6 +23,7 @@ CREATE TABLE playlists_tracks (
     CONSTRAINT fk_playlist
     FOREIGN KEY (playlist_id)
     REFERENCES playlists(id)
+    -- above 2 lines mean: playlist_id column must contain a value that exists already in playlists.id.
     ON DELETE CASCADE,
 
     CONSTRAINT fk_track
@@ -33,4 +34,5 @@ CREATE TABLE playlists_tracks (
 -- this one ensures a track can only be in a playlist one time
     CONSTRAINT unique_playlist_track
     UNIQUE (playlist_id, track_id)
-)
+    --above line means that you cannot add the same track to the same playlist twice
+);
